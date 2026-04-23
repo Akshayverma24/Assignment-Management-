@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const API_BASE = 'http://localhost:5000/api';
+  const API_BASE = 'https://assignment-management-2j7b.onrender.com';
 
   // Password Show/Hide Toggle
   const toggleButtons = document.querySelectorAll('.input-toggle');
