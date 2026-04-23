@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', async () => {
-  const API = 'https://assignment-management-2j7b.onrender.com';
+  const API = 'https://assignment-management-2j7b.onrender.com/api';
   const token = localStorage.getItem('token');
   const user = JSON.parse(localStorage.getItem('user') || '{}');
 
