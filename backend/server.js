@@ -7,7 +7,6 @@ const fs = require('fs');
 
 dotenv.config();
 
-
 const app = express();
 
 // Middleware
@@ -23,14 +22,13 @@ if (!fs.existsSync(uploadsDir)) {
 // Serve uploaded files
 app.use('/uploads', express.static(uploadsDir));
 
-// Serve frontend static files
+// Serve frontend files
 app.use(express.static(path.join(__dirname, '..', 'frontend')));
 
-// Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/webproject', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+// MongoDB Connection
+mongoose.connect(
+  process.env.MONGO_URI || 'mongodb://localhost:27017/webproject'
+)
 .then(() => console.log('MongoDB connected'))
 .catch(err => console.log(err));
 
@@ -40,5 +38,16 @@ app.use('/api/assignments', require('./routes/assignments'));
 app.use('/api/submissions', require('./routes/submissions'));
 app.use('/api/students', require('./routes/students'));
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// Default route
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'frontend', 'index.html'));
+});
+
+// Local run only
+if (process.env.NODE_ENV !== 'production') {
+  const PORT = process.env.PORT || 5000;
+  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+}
+
+// Export for Vercel
+module.exports = app;
