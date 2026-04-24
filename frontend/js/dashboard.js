@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
 
-  const API_BASE = 'https://assignment-management-2j7b.onrender.com/api';
+  const API_BASE = '/api';
 
   // ============================
   // Load User Info
