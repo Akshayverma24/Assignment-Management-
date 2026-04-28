@@ -5,7 +5,7 @@
     <strong>An advanced, AI-powered academic platform streamlining the assignment lifecycle for both tutors and students.</strong>
     <br />
     <br />
-    <a href="https://assignment-evaluator-2avi.onrender.com">🌍 Live Demo</a> &middot;
+    <a href="https://assignment-management-n6lfowvco-akshayverma24s-projects.vercel.app/">🌍 Live Demo</a> &middot;
     <a href="#-features">Features</a> &middot;
     <a href="#-tech-stack">Tech Stack</a> &middot;
     <a href="#-getting-started">Getting Started</a> &middot;
@@ -71,8 +71,7 @@ Follow these instructions to set up the EduFlow platform on your local machine f
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/ShashankPandey304/Assignment_Evaluator.git
-   cd Assignment_Evaluator
+   https://github.com/Akshayverma24/Assignment-Management-.git 
    ```
 
 2. **Setup the Backend**
