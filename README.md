@@ -129,16 +129,7 @@ EduFlow/
     ├── css/                  # Custom Design System & Animations
     ├── js/                   # Dashboard Logic & API integration
     └── *.html                # User Views (Dashboards, Login, etc)
-```
-
-## 📜 License & Credits
-
-This is a proprietary team project developed by:
-* **Shashank Pandey**
-* **Akrash Saini**
-* **Druv Kumar**
-
-All rights reserved. Do not copy or distribute without permission.
+``
 
 ---
 <div align="center">
